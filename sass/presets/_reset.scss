@@ -1,0 +1,29 @@
+/* ------------------------------------------------ESTILOS GENERALES DE LA PAGINA------------------------------------------------------ */
+
+/* Definición de la fuente de toda la pagina */
+*{
+    font-family: "Alumni Sans", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 20px;
+    font-style: normal;
+}
+
+
+/* Evitar el formato lista,hipervinculo,y que se sobrepase en el documento*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Fondo y color de las letras de la pagina */
+/* *{
+    background-color: black;
+    color: white;
+} */
+
+li {
+    display: inline-block;
+}
