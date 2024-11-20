@@ -1,4 +1,4 @@
-/* ESTILOS MAIN INDEX */
+/* ESTILOS MAIN  PAGINA INDEX */
 
 #main__index{
     min-height: 10vh;
@@ -13,7 +13,7 @@
     font-size: 3em;
 }
 
-/* Seccion Keep Up with us */
+/* SECCION KEEP UP WITH US INDEX    */
 
 .main__KIT-index {
     text-align: justify;
@@ -59,7 +59,7 @@
     height: auto;
 }
 
-/* Responsive para seccion Keep Up With Us */
+/* RESPONSIVE SECCION KEEP UP WITH US */
 
 @media (max-width: 768px) {
     .main__news-content {
@@ -102,8 +102,88 @@
     }
 }
 
-/* Estilos seccion Sign Up */
+/* ESTILOS SECCION SIGN UP INDEX */
 .main__suscribe-index {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.suscribe-content {
+    display: block;
+    margin-right: 20px;
+}
+
+.main__suscribe-title {
+    font-weight: bold;
+    font-size: 30px; 
+    margin-bottom: 10px;
+}
+
+.main__title-signup-index {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.suscribe-bar {
+    display: flex;
+    align-items: center; 
+}
+
+.suscribe-bar input[type="email"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px; 
+    width: 250px; 
+}
+
+.suscribe-bar input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #E5F951;
+    color: black;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.suscribe-bar input[type="submit"]:hover {
+    background-color: #E5F951;
+}
+
+/* RESPONSIVE SECCIONS SUSCRIBE*/
+@media (max-width: 768px) {
+    .main__suscribe-index {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
+    .suscribe-bar {
+        width: 100%; 
+    }
+
+    .suscribe-bar input[type="email"] {
+        width: 100%; 
+        margin-bottom: 10px; 
+        border-radius: 5px; 
+    }
+
+    .suscribe-bar input[type="submit"] {
+        width: 100%; 
+        border-radius: 5px; 
+    }
+}
+
+/* ESTILOS DEL MAIN PAGINA PAGINA ABOUT US */
+.main__card--about {
+    margin: 20px auto; 
+    width: 80%;
+    height: auto;
+}
+
+/* ESTILOS SECCION SIGN UP PAGINA ABOUT US */
+.main__suscribe-about {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -154,9 +234,9 @@
 
 /* Responsive para la seccion suscribe */
 @media (max-width: 768px) {
-    .main__suscribe-index {
+    .main__suscribe-about {
         flex-direction: column; 
-        align-items: flex-start; 
+        align-items: center;
     }
 
     .suscribe-bar {
