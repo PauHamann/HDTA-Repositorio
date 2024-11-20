@@ -1,177 +1,177 @@
 @charset "UTF-8";
 /* ------------------------------------------------LLAMAR LOS ESTILOS EN CADA PAGINA----------------------------------------------------- */
-/* ------------------------------------------------ESTILOS GENERALES DE LA PAGINA------------------------------------------------------ */
-/* Definición de la fuente de toda la pagina */
-* {
-  font-family: "Alumni Sans", system-ui;
-  font-optical-sizing: auto;
-  font-weight: 20px;
-  font-style: normal;
-}
 
-/* Evitar el formato lista,hipervinculo,y que se sobrepase en el documento*/
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  list-style: none;
-}
-
-/* Fondo y color de las letras de la pagina */
-/* *{
-    background-color: black;
-    color: white;
-} */
-li {
-  display: inline-block;
-}
-
-/* ------------------------------------------------ESTILOS ABOUT US----------------------------------------------------- */
-/* Estilos del body */
-#body__about-us {
-  max-width: 1400px;
+/* ESTILOS MAIN  PAGINA INDEX */
+#main__index {
+  min-height: 10vh;
+  padding: 0 40px;
   background-color: black;
   color: white;
 }
 
-/* Estilos del header */
-#header-about-us {
+.main_title_index {
+  text-align: center;
+  font-style: italic; /* Aplica cursiva al texto */
+  font-size: 3em;
+}
+
+/* SECCION KEEP UP WITH US INDEX    */
+.main__KIT-index {
+  text-align: justify;
+  margin: 40px 0;
+}
+
+.separator {
+  border: none;
+  border-top: 2px solid #6F4E38;
+  margin: 10px 0;
   width: 100%;
-  height: 300px;
-  background-image: url(../images/HEADER_ABOUT.jpg);
-  background-size: cover;
-  background-position: center;
-  position: relative;
+}
+
+.main__kit-title-index {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.main__news-content {
   display: flex;
   justify-content: center;
   align-items: center;
+  justify-content: space-between;
 }
 
-#header-about-us::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Oscurece con negro y 50% de opacidad */
-  z-index: 1;
+.main__news-section {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 400px;
+  flex: 1; /* Permite que el recuadro ocupe el espacio disponible */
+  margin-right: 20px;
 }
 
-.header__slogan-about {
-  position: relative;
-  z-index: 2; /* Asegura que el texto esté por encima del overlay */
-  text-align: center;
-  font-style: italic;
-  color: white;
-  padding: 10px;
+.main__news-title {
+  font-size: 20px;
   font-weight: bold;
-  font-size: 3rem;
+  margin-bottom: 10px;
 }
 
-/* Responsive para header */
+.main__logo--img {
+  width: 300px;
+  height: auto;
+}
+
+/* RESPONSIVE SECCION KEEP UP WITH US */
 @media (max-width: 768px) {
-  #header-about-us {
-    height: 200px; /* Ajusta la altura en pantallas pequeñas */
+  .main__news-content {
+    flex-direction: column;
+    align-items: center;
   }
-  .header__slogan-about {
-    font-size: 2rem; /* Reduce el tamaño del texto en pantallas pequeñas */
-    padding: 5px; /* Ajusta el padding */
+  .main__news-section {
+    margin-right: 0;
+    max-width: 90%;
+    margin-bottom: 20px;
+  }
+  .main__logo--img {
+    width: 80%;
+    max-width: 200px;
+  }
+  .main__kit-title-index {
+    font-size: 20px;
+  }
+  .main__news-title {
+    font-size: 18px;
   }
 }
 @media (max-width: 480px) {
-  #header-about-us {
-    height: 150px; /* Ajusta la altura aún más en pantallas muy pequeñas */
+  .main__kit-title-index {
+    font-size: 18px;
   }
-  .header__slogan-about {
-    font-size: 1.5rem; /* Reduce aún más el tamaño del texto */
-    padding: 3px; /* Ajusta el padding */
+  .main__news-title {
+    font-size: 16px;
+  }
+  .main__logo--img {
+    width: 70%; /* Reduce el tamaño del logo al 70% del ancho */
+    max-width: 150px;
   }
 }
-/* Estilos del main--About Us */
+/* ESTILOS SECCION SIGN UP INDEX */
+.main__suscribe-index {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.suscribe-content {
+  display: block;
+  margin-right: 20px;
+}
+
+.main__suscribe-title {
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.main__title-signup-index {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.suscribe-bar {
+  display: flex;
+  align-items: center;
+}
+
+.suscribe-bar input[type=email] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  width: 250px;
+}
+
+.suscribe-bar input[type=submit] {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #E5F951;
+  color: black;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.suscribe-bar input[type=submit]:hover {
+  background-color: #E5F951;
+}
+
+/* RESPONSIVE SECCIONS SUSCRIBE*/
+@media (max-width: 768px) {
+  .main__suscribe-index {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .suscribe-bar {
+    width: 100%;
+  }
+  .suscribe-bar input[type=email] {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  .suscribe-bar input[type=submit] {
+    width: 100%;
+    border-radius: 5px;
+  }
+}
+/* ESTILOS DEL MAIN PAGINA PAGINA ABOUT US */
 .main__card--about {
   margin: 20px auto;
   width: 80%;
   height: auto;
 }
 
-/* ESTILOS PARA EL TITULO ABOUT */
-#main-about-us {
-  padding: 0 20px;
-}
-
-.main__intro-about {
-  font-size: 24px;
-  text-align: left;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  display: inline-block;
-}
-
-/* Seccion torunaments */
-.main__tournaments {
-  margin: 40px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  border-color: #6f4e38;
-  border-style: solid;
-}
-
-h1 {
-  flex: 1;
-  text-align: center;
-  font-style: italic;
-}
-
-.image-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-}
-
-.circular-img {
-  width: 100px;
-  height: 100px;
-  margin: 20px;
-  border-radius: 50%; /* Hace que la imagen sea circular */
-  object-fit: cover; /* Asegura que la imagen llene el espacio sin deformarse */
-}
-
-/* Responsive seccion tournaments */
-@media (max-width: 768px) {
-  .main__tournaments {
-    margin: 20px;
-    padding: 10px;
-  }
-  h1 {
-    font-size: 1.5rem;
-    text-align: center;
-  }
-  .circular-img {
-    width: 80px;
-    height: 80px;
-    margin: 10px;
-  }
-}
-@media (max-width: 480px) {
-  h1 {
-    font-size: 1.2rem;
-  }
-  .circular-img {
-    width: 60px;
-    height: 60px;
-  }
-}
-/* Style para las cajas de testimonios realizado con Bootstrap */
-.main__container-testimonial1, .main__container-testimonial2, .main__container-testimonial3 {
-  text-align: center;
-  font-weight: bold;
-}
-
-/* Estilos seccion Sign Up */
+/* ESTILOS SECCION SIGN UP PAGINA ABOUT US */
 .main__suscribe-about {
   display: flex;
   align-items: center;
@@ -240,7 +240,192 @@ h1 {
     border-radius: 5px;
   }
 }
-/* ESTILOS FOOTER */
+/* ESTILOS HEADER INDEX */
+#header__index {
+  position: relative; /* Necesario para el posicionamiento del pseudo-elemento */
+  display: flex;
+  flex-direction: column; /* Cambiar a columna para apilar el logo y el nav */
+  justify-content: flex-start; /* Alinea los elementos al principio del contenedor */
+  padding: 0 20px;
+  background-image: url(../images/BANNER_HOME.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
+
+#header__index::after {
+  content: ""; /* Necesario para que el pseudo-elemento se muestre */
+  position: absolute; /* Posiciona el overlay sobre el header */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Color negro semitransparente */
+  z-index: 1; /* Asegúrate de que el overlay esté por encima de la imagen */
+}
+
+.header__title_index {
+  position: relative;
+  z-index: 2; /* Asegura que el texto esté por encima del overlay */
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 50px; /* Ajusta el tamaño del texto como desees */
+  color: white;
+  padding: 10px;
+  margin-top: auto;
+}
+
+/* ESTILOS DEL HEADER ABOUT US */
+#header-about-us {
+  width: 100%;
+  height: 300px;
+  background-image: url(../images/HEADER_ABOUT.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#header-about-us::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Oscurece con negro y 50% de opacidad */
+  z-index: 1;
+}
+
+.header__slogan-about {
+  position: relative;
+  z-index: 2; /* Asegura que el texto esté por encima del overlay */
+  text-align: center;
+  font-style: italic;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+/* Responsive para header */
+@media (max-width: 768px) {
+  #header-about-us {
+    height: 200px; /* Ajusta la altura en pantallas pequeñas */
+  }
+  .header__slogan-about {
+    font-size: 2rem; /* Reduce el tamaño del texto en pantallas pequeñas */
+    padding: 5px; /* Ajusta el padding */
+  }
+}
+@media (max-width: 480px) {
+  #header-about-us {
+    height: 150px; /* Ajusta la altura aún más en pantallas muy pequeñas */
+  }
+  .header__slogan-about {
+    font-size: 1.5rem; /* Reduce aún más el tamaño del texto */
+    padding: 3px; /* Ajusta el padding */
+  }
+}
+/* Estilos del header */
+#header-about-us {
+  width: 100%;
+  height: 300px;
+  background-image: url(../images/HEADER_ABOUT.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#header-about-us::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Oscurece con negro y 50% de opacidad */
+  z-index: 1;
+}
+
+.header__slogan-about {
+  position: relative;
+  z-index: 2; /* Asegura que el texto esté por encima del overlay */
+  text-align: center;
+  font-style: italic;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+/* Responsive para header */
+@media (max-width: 768px) {
+  #header-about-us {
+    height: 200px; /* Ajusta la altura en pantallas pequeñas */
+  }
+  .header__slogan-about {
+    font-size: 2rem; /* Reduce el tamaño del texto en pantallas pequeñas */
+    padding: 5px; /* Ajusta el padding */
+  }
+}
+@media (max-width: 480px) {
+  #header-about-us {
+    height: 150px; /* Ajusta la altura aún más en pantallas muy pequeñas */
+  }
+  .header__slogan-about {
+    font-size: 1.5rem; /* Reduce aún más el tamaño del texto */
+    padding: 3px; /* Ajusta el padding */
+  }
+}
+/* ESTILOS FOOTER PAGINA INDEX */
+#footer__index {
+  padding: 0 40px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between; /* Separar a izquierda y derecha */
+  align-items: center;
+  background-image: url(../images/FOOTER_INDEX.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.footer__contactinfo-index {
+  color: white;
+  text-align: left; /* Alineación a la izquierda */
+}
+
+.footer__socialmedia {
+  color: white;
+  text-align: right; /* Alineación a la derecha */
+  padding: 10px;
+  justify-content: flex-end;
+}
+
+/* Estilos responsive */
+@media screen and (max-width: 768px) {
+  #footer__index {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+  }
+  .footer__contactinfo-index {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .footer__socialmedia {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+/* ESTILOS FOOTER PAGINA ABOUT US */
 #footer__about {
   padding: 0 40px;
   width: 100%;
@@ -283,6 +468,7 @@ h1 {
     text-align: center;
   }
 }
+
 /* ------------------------------------------------ESTILOS PROGRAMS & NEWS----------------------------------------------------- */
 /* Estilos del body */
 #body-programs {
