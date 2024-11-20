@@ -1,0 +1,90 @@
+
+/* Estilos del body */
+#body__about-us {
+    max-width: 1400px;
+    background-color: black;
+    color: white;
+}
+
+/* ESTILOS PARA EL TITULO ABOUT */
+
+#main-about-us{
+    padding: 0 20px;
+}
+
+
+.main__intro-about {
+    font-size: 24px; 
+    text-align: left; 
+    margin-top:20px;
+    margin-bottom: 20px; 
+    display: inline-block; 
+}
+
+/* ESTILOS SECCION TOURNAMENTS */
+.main__tournaments {
+    margin: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; 
+    border-color: #6f4e38;
+    border-style: solid;
+}
+
+h1 {
+    flex: 1; 
+    text-align: center;
+    font-style: italic;
+}
+
+.image-container {
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.circular-img {
+    width: 100px;
+    height: 100px; 
+    margin: 20px;
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    object-fit: cover; /* Asegura que la imagen llene el espacio sin deformarse */
+}
+
+/* RESPONSIVE SECCIO TOURNAMENTS */
+@media (max-width: 768px) {
+    .main__tournaments {
+        margin: 20px;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5rem; 
+        text-align: center;
+    }
+
+    .circular-img {
+        width: 80px; 
+        height: 80px;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2rem; 
+    }
+
+    .circular-img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* ESTILOS PARA LAS CAJAS DE TESTIMONIOS BOOTSTRAP */
+.main__container-testimonial1 , .main__container-testimonial2, .main__container-testimonial3 {
+    text-align: center;
+    font-weight: bold;
+}
+

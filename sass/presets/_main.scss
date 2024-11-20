@@ -1,0 +1,176 @@
+/* ESTILOS MAIN INDEX */
+
+#main__index{
+    min-height: 10vh;
+    padding: 0 40px;
+    background-color: black;
+    color: white;
+}   
+
+.main_title_index {
+    text-align: center; 
+    font-style: italic;  /* Aplica cursiva al texto */
+    font-size: 3em;
+}
+
+/* Seccion Keep Up with us */
+
+.main__KIT-index {
+    text-align: justify;
+    margin: 40px 0;
+}
+
+.separator {
+    border: none;
+    border-top: 2px solid #6F4E38; 
+    margin: 10px 0; 
+    width: 100%; 
+}
+
+.main__kit-title-index {
+    font-size: 24px; 
+    margin: 20px 0;
+}
+
+.main__news-content {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between; 
+}
+
+.main__news-section {
+    background-color: white;
+    color: black; 
+    border-radius: 10px;
+    padding: 20px; 
+    max-width: 400px;
+    flex: 1; /* Permite que el recuadro ocupe el espacio disponible */
+    margin-right: 20px;
+}
+
+.main__news-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.main__logo--img {
+    width: 300px; 
+    height: auto;
+}
+
+/* Responsive para seccion Keep Up With Us */
+
+@media (max-width: 768px) {
+    .main__news-content {
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .main__news-section {
+        margin-right: 0;
+        max-width: 90%;
+        margin-bottom: 20px; 
+    }
+
+    .main__logo--img {
+        width: 80%; 
+        max-width: 200px; 
+    }
+
+    .main__kit-title-index {
+        font-size: 20px;
+    }
+
+    .main__news-title {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main__kit-title-index {
+        font-size: 18px; 
+    }
+
+    .main__news-title {
+        font-size: 16px;
+    }
+
+    .main__logo--img {
+        width: 70%; /* Reduce el tamaño del logo al 70% del ancho */
+        max-width: 150px; 
+    }
+}
+
+/* Estilos seccion Sign Up */
+.main__suscribe-index {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.suscribe-content {
+    display: block;
+    margin-right: 20px;
+}
+
+.main__suscribe-title {
+    font-weight: bold;
+    font-size: 30px; 
+    margin-bottom: 10px;
+}
+
+.main__title-signup-index {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.suscribe-bar {
+    display: flex;
+    align-items: center; 
+}
+
+.suscribe-bar input[type="email"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px; 
+    width: 250px; 
+}
+
+.suscribe-bar input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #E5F951;
+    color: black;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.suscribe-bar input[type="submit"]:hover {
+    background-color: #E5F951;
+}
+
+/* Responsive para la seccion suscribe */
+@media (max-width: 768px) {
+    .main__suscribe-index {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
+    .suscribe-bar {
+        width: 100%; 
+    }
+
+    .suscribe-bar input[type="email"] {
+        width: 100%; 
+        margin-bottom: 10px; 
+        border-radius: 5px; 
+    }
+
+    .suscribe-bar input[type="submit"] {
+        width: 100%; 
+        border-radius: 5px; 
+    }
+}

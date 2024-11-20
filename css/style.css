@@ -27,18 +27,169 @@ li {
   display: inline-block;
 }
 
-/* ------------------------------------------------ESTILOS INDEX----------------------------------------------------- */
-/* ESTILOS BODY */
-#body_index {
-  max-width: 1400px;
+/* ESTILOS MAIN INDEX */
+#main__index {
+  min-height: 10vh;
+  padding: 0 40px;
+  background-color: black;
+  color: white;
 }
 
-/* ESTILOS NAVBAR BOOTSTRAP */
-.nav__logo-index {
-  width: 100px;
+.main_title_index {
+  text-align: center;
+  font-style: italic; /* Aplica cursiva al texto */
+  font-size: 3em;
 }
 
-/* ESTILOS HEADER */
+/* Seccion Keep Up with us */
+.main__KIT-index {
+  text-align: justify;
+  margin: 40px 0;
+}
+
+.separator {
+  border: none;
+  border-top: 2px solid #6F4E38;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.main__kit-title-index {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.main__news-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main__news-section {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 400px;
+  flex: 1; /* Permite que el recuadro ocupe el espacio disponible */
+  margin-right: 20px;
+}
+
+.main__news-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.main__logo--img {
+  width: 300px;
+  height: auto;
+}
+
+/* Responsive para seccion Keep Up With Us */
+@media (max-width: 768px) {
+  .main__news-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .main__news-section {
+    margin-right: 0;
+    max-width: 90%;
+    margin-bottom: 20px;
+  }
+  .main__logo--img {
+    width: 80%;
+    max-width: 200px;
+  }
+  .main__kit-title-index {
+    font-size: 20px;
+  }
+  .main__news-title {
+    font-size: 18px;
+  }
+}
+@media (max-width: 480px) {
+  .main__kit-title-index {
+    font-size: 18px;
+  }
+  .main__news-title {
+    font-size: 16px;
+  }
+  .main__logo--img {
+    width: 70%; /* Reduce el tamaño del logo al 70% del ancho */
+    max-width: 150px;
+  }
+}
+/* Estilos seccion Sign Up */
+.main__suscribe-index {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.suscribe-content {
+  display: block;
+  margin-right: 20px;
+}
+
+.main__suscribe-title {
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.main__title-signup-index {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.suscribe-bar {
+  display: flex;
+  align-items: center;
+}
+
+.suscribe-bar input[type=email] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  width: 250px;
+}
+
+.suscribe-bar input[type=submit] {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #E5F951;
+  color: black;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.suscribe-bar input[type=submit]:hover {
+  background-color: #E5F951;
+}
+
+/* Responsive para la seccion suscribe */
+@media (max-width: 768px) {
+  .main__suscribe-index {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .suscribe-bar {
+    width: 100%;
+  }
+  .suscribe-bar input[type=email] {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  .suscribe-bar input[type=submit] {
+    width: 100%;
+    border-radius: 5px;
+  }
+}
+/* ESTILOS HEADER INDEX */
 #header__index {
   position: relative; /* Necesario para el posicionamiento del pseudo-elemento */
   display: flex;
@@ -74,18 +225,206 @@ li {
   margin-top: auto;
 }
 
-/* ESTILOS MAIN */
-#main__index {
-  min-height: 10vh;
-  padding: 0 40px;
-  background-color: black;
-  color: white;
+/* ESTILOS DEL HEADER ABOUT US */
+#header-about-us {
+  width: 100%;
+  height: 300px;
+  background-image: url(../images/HEADER_ABOUT.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.main_title_index {
+#header-about-us::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Oscurece con negro y 50% de opacidad */
+  z-index: 1;
+}
+
+.header__slogan-about {
+  position: relative;
+  z-index: 2; /* Asegura que el texto esté por encima del overlay */
   text-align: center;
-  font-style: italic; /* Aplica cursiva al texto */
-  font-size: 3em;
+  font-style: italic;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+/* Responsive para header */
+@media (max-width: 768px) {
+  #header-about-us {
+    height: 200px; /* Ajusta la altura en pantallas pequeñas */
+  }
+  .header__slogan-about {
+    font-size: 2rem; /* Reduce el tamaño del texto en pantallas pequeñas */
+    padding: 5px; /* Ajusta el padding */
+  }
+}
+@media (max-width: 480px) {
+  #header-about-us {
+    height: 150px; /* Ajusta la altura aún más en pantallas muy pequeñas */
+  }
+  .header__slogan-about {
+    font-size: 1.5rem; /* Reduce aún más el tamaño del texto */
+    padding: 3px; /* Ajusta el padding */
+  }
+}
+/* Estilos del header */
+#header-about-us {
+  width: 100%;
+  height: 300px;
+  background-image: url(../images/HEADER_ABOUT.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#header-about-us::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Oscurece con negro y 50% de opacidad */
+  z-index: 1;
+}
+
+.header__slogan-about {
+  position: relative;
+  z-index: 2; /* Asegura que el texto esté por encima del overlay */
+  text-align: center;
+  font-style: italic;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+/* Responsive para header */
+@media (max-width: 768px) {
+  #header-about-us {
+    height: 200px; /* Ajusta la altura en pantallas pequeñas */
+  }
+  .header__slogan-about {
+    font-size: 2rem; /* Reduce el tamaño del texto en pantallas pequeñas */
+    padding: 5px; /* Ajusta el padding */
+  }
+}
+@media (max-width: 480px) {
+  #header-about-us {
+    height: 150px; /* Ajusta la altura aún más en pantallas muy pequeñas */
+  }
+  .header__slogan-about {
+    font-size: 1.5rem; /* Reduce aún más el tamaño del texto */
+    padding: 3px; /* Ajusta el padding */
+  }
+}
+/* ESTILOS FOOTER PAGINA INDEX */
+#footer__index {
+  padding: 0 40px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between; /* Separar a izquierda y derecha */
+  align-items: center;
+  background-image: url(../images/FOOTER_INDEX.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.footer__contactinfo-index {
+  color: white;
+  text-align: left; /* Alineación a la izquierda */
+}
+
+.footer__socialmedia {
+  color: white;
+  text-align: right; /* Alineación a la derecha */
+  padding: 10px;
+  justify-content: flex-end;
+}
+
+/* Estilos responsive */
+@media screen and (max-width: 768px) {
+  #footer__index {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+  }
+  .footer__contactinfo-index {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .footer__socialmedia {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+/* ESTILOS FOOTER PAGINA ABOUT US */
+#footer__about {
+  padding: 0 40px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url(../images/FOOTER_INDEX.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.footer__contactinfo-about,
+.footer__socialmedia {
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+}
+
+/* Respnsive para el footer */
+@media screen and (max-width: 768px) {
+  #footer__about {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer__contactinfo-about,
+  .footer__socialmedia {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  #footer__about {
+    padding: 0 20px;
+  }
+  .footer__contactinfo-about,
+  .footer__socialmedia {
+    width: 100%;
+    text-align: center;
+  }
+}
+/* ESTILOS BODY */
+#body_index {
+  max-width: 1400px;
+}
+
+/* ESTILOS NAVBAR BOOTSTRAP */
+.nav__logo-index {
+  width: 100px;
 }
 
 /* ESTILOS PARA EL TITULO PROGRAMS */
@@ -235,195 +574,6 @@ li {
   .main__gallery-container {
     grid-template-columns: 1fr;
     grid-template-areas: "GF1" "GF2" "GF3" "GF4" "GF5";
-  }
-}
-/* Seccion Keep Up with us */
-.main__KIT-index {
-  text-align: justify;
-  margin: 40px 0;
-}
-
-.separator {
-  border: none;
-  border-top: 2px solid #6F4E38;
-  margin: 10px 0;
-  width: 100%;
-}
-
-.main__kit-title-index {
-  font-size: 24px;
-  margin: 20px 0;
-}
-
-.main__news-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.main__news-section {
-  background-color: white;
-  color: black;
-  border-radius: 10px;
-  padding: 20px;
-  max-width: 400px;
-  flex: 1; /* Permite que el recuadro ocupe el espacio disponible */
-  margin-right: 20px;
-}
-
-.main__news-title {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.main__logo--img {
-  width: 300px;
-  height: auto;
-}
-
-/* Responsive para seccion Keep Up With Us */
-@media (max-width: 768px) {
-  .main__news-content {
-    flex-direction: column;
-    align-items: center;
-  }
-  .main__news-section {
-    margin-right: 0;
-    max-width: 90%;
-    margin-bottom: 20px;
-  }
-  .main__logo--img {
-    width: 80%;
-    max-width: 200px;
-  }
-  .main__kit-title-index {
-    font-size: 20px;
-  }
-  .main__news-title {
-    font-size: 18px;
-  }
-}
-@media (max-width: 480px) {
-  .main__kit-title-index {
-    font-size: 18px;
-  }
-  .main__news-title {
-    font-size: 16px;
-  }
-  .main__logo--img {
-    width: 70%; /* Reduce el tamaño del logo al 70% del ancho */
-    max-width: 150px;
-  }
-}
-/* Estilos seccion Sign Up */
-.main__suscribe-index {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.suscribe-content {
-  display: block;
-  margin-right: 20px;
-}
-
-.main__suscribe-title {
-  font-weight: bold;
-  font-size: 30px;
-  margin-bottom: 10px;
-}
-
-.main__title-signup-index {
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-
-.suscribe-bar {
-  display: flex;
-  align-items: center;
-}
-
-.suscribe-bar input[type=email] {
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px 0 0 5px;
-  width: 250px;
-}
-
-.suscribe-bar input[type=submit] {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #E5F951;
-  color: black;
-  border: none;
-  border-radius: 0 5px 5px 0;
-  cursor: pointer;
-}
-
-.suscribe-bar input[type=submit]:hover {
-  background-color: #E5F951;
-}
-
-/* Responsive para la seccion suscribe */
-@media (max-width: 768px) {
-  .main__suscribe-index {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .suscribe-bar {
-    width: 100%;
-  }
-  .suscribe-bar input[type=email] {
-    width: 100%;
-    margin-bottom: 10px;
-    border-radius: 5px;
-  }
-  .suscribe-bar input[type=submit] {
-    width: 100%;
-    border-radius: 5px;
-  }
-}
-/* ESTILOS FOOTER */
-#footer__index {
-  padding: 0 40px;
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: space-between; /* Separar a izquierda y derecha */
-  align-items: center;
-  background-image: url(../images/FOOTER_INDEX.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
-.footer__contactinfo-index {
-  color: white;
-  text-align: left; /* Alineación a la izquierda */
-}
-
-.footer__socialmedia {
-  color: white;
-  text-align: right; /* Alineación a la derecha */
-  padding: 10px;
-  justify-content: flex-end;
-}
-
-/* Estilos responsive */
-@media screen and (max-width: 768px) {
-  #footer__index {
-    flex-direction: column;
-    height: auto;
-    align-items: center;
-  }
-  .footer__contactinfo-index {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-  .footer__socialmedia {
-    width: 100%;
-    margin-bottom: 10px;
   }
 }
 /* ------------------------------------------------ESTILOS ABOUT US----------------------------------------------------- */
