@@ -1,5 +1,31 @@
 @charset "UTF-8";
-g/* ------------------------------------------------LLAMAR LOS ESTILOS EN CADA PAGINA----------------------------------------------------- */
+/* ------------------------------------------------LLAMAR LOS ESTILOS EN CADA PAGINA----------------------------------------------------- */
+/* ------------------------------------------------ESTILOS GENERALES DE LA PAGINA------------------------------------------------------ */
+/* Definición de la fuente de toda la pagina */
+* {
+  font-family: "Alumni Sans", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 20px;
+  font-style: normal;
+}
+
+/* Evitar el formato lista,hipervinculo,y que se sobrepase en el documento*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* Fondo y color de las letras de la pagina */
+/* *{
+    background-color: black;
+    color: white;
+} */
+li {
+  display: inline-block;
+}
 
 /* ESTILOS MAIN  PAGINA INDEX */
 #main__index {
@@ -35,7 +61,6 @@ g/* ------------------------------------------------LLAMAR LOS ESTILOS EN CADA P
 
 .main__news-content {
   display: flex;
-  justify-content: center;
   align-items: center;
   justify-content: space-between;
 }
@@ -467,6 +492,267 @@ g/* ------------------------------------------------LLAMAR LOS ESTILOS EN CADA P
     width: 100%;
     text-align: center;
   }
+}
+/* ESTILOS BODY */
+#body_index {
+  max-width: 1400px;
+}
+
+/* ESTILOS NAVBAR BOOTSTRAP */
+.nav__logo-index {
+  width: 100px;
+}
+
+/* ESTILOS PARA EL TITULO PROGRAMS */
+.main_title_programs_index {
+  font-size: 24px;
+  text-align: left;
+  position: relative; /* Permite el uso de ::after para la línea */
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.main_title_programs_index::after {
+  content: ""; /* Crea un pseudo-elemento vacío */
+  position: absolute; /* Posiciona la línea en relación al h2 */
+  top: 50%; /* Centra verticalmente la línea respecto al título */
+  left: 100%;
+  margin-left: 10px;
+  width: 100%;
+  height: 2px;
+  background-color: #6F4E38;
+  transform: translateY(-50%); /* Alinea mejor la línea con el centro del texto */
+}
+
+/* ESTILOS FOTOS PROGRAMAS-INDEX */
+.main__programs-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 40px 0;
+  flex-wrap: wrap; /* Permitir que los items se envuelvan en filas */
+}
+
+.program-item {
+  display: flex;
+  flex-direction: column; /* Colocar el título arriba de la imagen */
+  align-items: center;
+  margin: 0 20px;
+}
+
+.program-item h4 {
+  margin: 0; /* Sin margen adicional para los títulos */
+}
+
+.program-item img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Media Queries para hacer la sección programs */
+@media (max-width: 1200px) {
+  .program-item img {
+    width: 250px;
+    height: 180px; /* Ajustar la altura proporcionalmente */
+  }
+  .program-item {
+    margin: 10px;
+  }
+}
+@media (max-width: 800px) {
+  .program-item img {
+    width: 200px;
+    height: 150px;
+  }
+  .program-item {
+    margin: 5px;
+  }
+}
+@media (max-width: 600px) {
+  .main__programs-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .program-item {
+    margin: 5px 0;
+  }
+  .program-item img {
+    width: 100%;
+    height: auto;
+  }
+}
+/* ESTILOS SLOGAN MAIN-INDEX */
+.main__slogan-index {
+  font-style: italic;
+  font-size: 2em;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.main__slogan-index strong {
+  font-weight: bold;
+}
+
+/* ESTILOS MAIN-IMAGENES GALLERY */
+.main__gallery-container {
+  display: grid;
+  width: 100%;
+  max-width: 1200px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-areas: "GF1     GF2      GF3      GF4      GF5";
+  column-gap: 20px;
+  margin: 0 auto;
+}
+
+.main__gallery-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Estilo de cada contenedor de imagen */
+.GF1, .GF2, .GF3, .GF4, .GF5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
+/* Se limita el tamano de las imagenes segun el espacio de las grillas */
+.main__gallery-container img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Media Queries para hacer la galería responsiva */
+@media (max-width: 1000px) {
+  .main__gallery-container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "GF1 GF2 GF3 GF4" "GF5 GF5 GF5 GF5";
+  }
+}
+@media (max-width: 900px) {
+  .main__gallery-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "GF1 GF2 GF3" "GF4 GF5 GF5";
+  }
+}
+@media (max-width: 600px) {
+  .main__gallery-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "GF1 GF2" "GF3 GF4" "GF5 GF5";
+  }
+}
+@media (max-width: 400px) {
+  .main__gallery-container {
+    grid-template-columns: 1fr;
+    grid-template-areas: "GF1" "GF2" "GF3" "GF4" "GF5";
+  }
+}
+/* Estilos del body */
+#body__about-us {
+  max-width: 1400px;
+  background-color: black;
+  color: white;
+}
+
+/* ESTILOS PARA EL TITULO ABOUT */
+#main-about-us {
+  padding: 0 20px;
+}
+
+.main__intro-about {
+  font-size: 24px;
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+/* ESTILOS SECCION TOURNAMENTS */
+.main__tournaments {
+  margin: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border-color: #6f4e38;
+  border-style: solid;
+}
+
+h1 {
+  flex: 1;
+  text-align: center;
+  font-style: italic;
+}
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.circular-img {
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  border-radius: 50%; /* Hace que la imagen sea circular */
+  object-fit: cover; /* Asegura que la imagen llene el espacio sin deformarse */
+}
+
+/* RESPONSIVE SECCIO TOURNAMENTS */
+@media (max-width: 768px) {
+  .main__tournaments {
+    margin: 20px;
+    padding: 10px;
+  }
+  h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .circular-img {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+  }
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+  .circular-img {
+    width: 60px;
+    height: 60px;
+  }
+}
+/* ESTILOS PARA LAS CAJAS DE TESTIMONIOS BOOTSTRAP */
+.main__container-testimonial1, .main__container-testimonial2, .main__container-testimonial3 {
+  text-align: center;
+  font-weight: bold;
+}
+
+/* ESTILOS PARA EL TITULO PROGRAMS */
+.main_title_programs_index {
+  font-size: 24px;
+  text-align: left;
+  position: relative; /* Permite el uso de ::after para la línea */
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.main_title_programs_index::after {
+  content: ""; /* Crea un pseudo-elemento vacío */
+  position: absolute; /* Posiciona la línea en relación al h2 */
+  top: 50%; /* Centra verticalmente la línea respecto al título */
+  left: 100%;
+  margin-left: 10px;
+  width: 100%;
+  height: 2px;
+  background-color: #6F4E38;
+  transform: translateY(-50%); /* Alinea mejor la línea con el centro del texto */
 }
 
 /* ------------------------------------------------ESTILOS PROGRAMS & NEWS----------------------------------------------------- */

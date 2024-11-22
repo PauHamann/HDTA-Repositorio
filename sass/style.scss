@@ -8,6 +8,31 @@
 @use "paginas/index";
 @use "paginas/about";
 
+
+
+
+/* ESTILOS PARA EL TITULO PROGRAMS */
+.main_title_programs_index {
+    font-size: 24px; 
+    text-align: left; 
+    position: relative; /* Permite el uso de ::after para la línea */
+    margin-bottom: 20px; 
+    display: inline-block; 
+}
+
+.main_title_programs_index::after {
+    content: ''; /* Crea un pseudo-elemento vacío */
+    position: absolute; /* Posiciona la línea en relación al h2 */
+    top: 50%; /* Centra verticalmente la línea respecto al título */
+    left: 100%; 
+    margin-left: 10px;
+    width: 100%;
+    height: 2px; 
+    background-color: #6F4E38; 
+    transform: translateY(-50%); /* Alinea mejor la línea con el centro del texto */
+}
+
+
 /* ------------------------------------------------ESTILOS PROGRAMS & NEWS----------------------------------------------------- */
 
 /* Estilos del body */
